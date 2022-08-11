@@ -1,3 +1,130 @@
-.App {
+body,
+html {
   font-family: 'Inter';
+  margin: 0;
+  --text-color: #00ABCA;
+  --dark-mode-color: rgba(43, 40, 58, 1);
+  height: 100vh;
+}
+
+.App {
+  height: 100%;
+  background-image: url('./images/reactjs-icon\ 2.png');
+  background-size: 250px;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+
+}
+
+nav {
+  height: 91px;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+
+}
+
+
+.nav-container {
+  display: flex;
+  padding: 20px;
+  padding-top: 30px;
+  justify-content: space-between;
+}
+
+.logo-header {
+  display: flex;
+}
+
+.logo-header img {
+  width: 29px;
+}
+
+.logo-header h1 {
+  margin: 0px;
+  margin-left: 7px;
+  font-size: 22px;
+  color: var(--text-color);
+}
+
+.dark-mode-toggle-container {
+  display: flex;
+  font-weight: 700;
+  color: var(--dark-mode-color);
+}
+
+.toggle-slider-container {
+  width: 30px;
+  height: 17px;
+  margin: 1px 10px;
+  border-radius: 12px;
+  background-color: var(--dark-mode-color);
+  padding: 1px 2px;
+  cursor: pointer;
+}
+
+
+.toggle-slider {
+  background-color: white;
+  height: 100%;
+  width: 50%;
+  border-radius: 100%;
+  transition: 0.3s all ease;
+}
+
+.toggle-slider-animate {
+  transform: translateX(100%);
+
+}
+
+main {
+  padding: 20px 40px;
+}
+
+main h1 {
+  font-size: 40px;
+  color: var(--dark-mode-color);
+}
+
+main ul {
+  font-size: 16px;
+}
+
+main li {
+  padding: 15px;
+  color: var(--dark-mode-color);
+}
+
+main li::marker {
+
+  font-size: 1.5rem;
+  color: var(--text-color);
+}
+
+/* DARK MODE STYLES */
+.main-dark {
+  background-color: #282D35;
+  background-image: url('./images/react-icon-dark.png');
+
+}
+
+.dark-mode-text {
+  color: white;
+}
+
+.disabled {
+  color: #D5D4D8;
+}
+
+.nav-dark {
+  background-color: var(--dark-mode-color);
+
+}
+
+.toggle-slider-container-dark {
+  background-color: white;
+
+}
+
+.toggle-slider-dark {
+  background-color: var(--dark-mode-color);
+
 }
