@@ -8,29 +8,15 @@ function App() {
   function toggleDarkMode() {
     setDarkMode((prevMode) => !prevMode);
   }
-  function darkModeTextSetter(bool, className, alternateClass = "") {
-    return ` ${bool ? className : alternateClass}`;
-  }
   return (
-    <div className={`${darkModeTextSetter(darkMode, "main-dark")} App`}>
-      <Navbar
-        darkMode={darkMode}
-        toggleDarkMode={toggleDarkMode}
-        darkModeTextSetter={darkModeTextSetter}
-      />
+    <div className={`App`}>
+      <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
 
-      <main>
-        <h1 className={`${darkMode ? "dark-mode-text" : ""}`}>
-          Fun facts about React
-        </h1>
+      <main className={darkMode ? "main-dark" : ""}>
+        <h1>Fun facts about React</h1>
         <ul>
           {reactFacts.map((fact) => (
-            <li
-              key={reactFacts.indexOf(fact)}
-              className={`${darkMode ? "dark-mode-text" : ""}`}
-            >
-              {fact}
-            </li>
+            <li key={reactFacts.indexOf(fact)}>{fact}</li>
           ))}
         </ul>
       </main>

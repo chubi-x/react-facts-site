@@ -1,19 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+
 body,
 html {
   font-family: 'Inter';
   margin: 0;
   --text-color: #00ABCA;
   --dark-mode-color: rgba(43, 40, 58, 1);
-  height: 100vh;
 }
 
 .App {
-  height: 100%;
-  background-image: url('./images/reactjs-icon\ 2.png');
-  background-size: 250px;
-  background-repeat: no-repeat;
-  background-position: right bottom;
-
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 nav {
@@ -52,8 +52,8 @@ nav {
 }
 
 .toggle-slider-container {
-  width: 30px;
-  height: 17px;
+  width: 36px;
+  height: 18px;
   margin: 1px 10px;
   border-radius: 12px;
   background-color: var(--dark-mode-color);
@@ -70,13 +70,13 @@ nav {
   transition: 0.3s all ease;
 }
 
-.toggle-slider-animate {
-  transform: translateX(100%);
-
-}
-
 main {
+  height: 100%;
   padding: 20px 40px;
+  background-image: url('./images/reactjs-icon\ 2.png');
+  background-size: 200px;
+  background-repeat: no-repeat;
+  background-position: right bottom;
 }
 
 main h1 {
@@ -100,31 +100,45 @@ main li::marker {
 }
 
 /* DARK MODE STYLES */
-.main-dark {
+
+.toggler-dark {
+  color: #D5D4D8;
+
+}
+
+nav.dark {
+  background-color: var(--dark-mode-color);
+
+}
+
+nav.dark .toggle-slider-container {
+  background-color: white;
+
+}
+
+nav.dark .toggle-slider {
+  transform: translateX(100%);
+  background-color: var(--dark-mode-color);
+
+}
+
+nav.dark .toggler-dark {
+  color: white;
+
+}
+
+nav.dark .toggler-light {
+  color: #D5D4D8;
+
+}
+
+main.main-dark {
   background-color: #282D35;
   background-image: url('./images/react-icon-dark.png');
 
 }
 
-.dark-mode-text {
+main.main-dark h1,
+main.main-dark li {
   color: white;
-}
-
-.disabled {
-  color: #D5D4D8;
-}
-
-.nav-dark {
-  background-color: var(--dark-mode-color);
-
-}
-
-.toggle-slider-container-dark {
-  background-color: white;
-
-}
-
-.toggle-slider-dark {
-  background-color: var(--dark-mode-color);
-
 }

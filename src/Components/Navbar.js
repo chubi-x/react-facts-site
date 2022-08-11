@@ -1,12 +1,8 @@
 import React from "react";
 import logo from "../images/logo192.png";
-export default function Navbar({
-  darkMode,
-  toggleDarkMode,
-  darkModeTextSetter,
-}) {
+export default function Navbar({ darkMode, toggleDarkMode }) {
   return (
-    <nav className={`${darkMode ? "nav-dark" : ""}`}>
+    <nav className={darkMode ? "dark" : ""}>
       <div className="nav-container">
         <div className="logo-header">
           <div className="logo-img">
@@ -15,30 +11,11 @@ export default function Navbar({
           <h1>ReactFacts</h1>
         </div>
         <div className="dark-mode-toggle-container">
-          <span className={darkModeTextSetter(darkMode, "disabled")}>
-            Light
-          </span>
-          <div
-            className={`${
-              darkMode ? "toggle-slider-container-dark" : ""
-            } toggle-slider-container`}
-            onClick={toggleDarkMode}
-          >
-            <div
-              className={`${
-                darkMode ? "toggle-slider-animate toggle-slider-dark" : ""
-              } toggle-slider`}
-            ></div>
+          <span className={"toggler-light"}>Light</span>
+          <div className={"toggle-slider-container"} onClick={toggleDarkMode}>
+            <div className={"toggle-slider"}></div>
           </div>
-          <span
-            className={darkModeTextSetter(
-              !darkMode,
-              "disabled",
-              "dark-mode-text"
-            )}
-          >
-            Dark
-          </span>
+          <span className={"toggler-dark"}>Dark</span>
         </div>
       </div>
     </nav>
